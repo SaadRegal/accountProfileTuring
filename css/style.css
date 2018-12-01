@@ -1,0 +1,100 @@
+/* Normalize */
+body {
+    margin: 0;
+}
+
+/*===Side Bar===*/
+.sidebar {
+    position: fixed;
+    height: 100%;
+    background-color: #fff;
+    width: 13.5vw;
+    padding: 10px 0 0 0;
+    border-right: 1px darkgray solid;
+}
+
+.toggle {
+    background-color: #dc412e;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px 0 0 1.5vw;
+    position: fixed;
+    z-index: 2;
+}
+.sidebar>.header{
+    border: 1px darkgray solid;
+    margin-top: 13vh;
+    padding: 0 0 0 1.5vw;
+}
+.sidebar>.item{
+padding: 10px 0 10px 1.5vw;
+}
+.sidebar>.item.active{
+    background-color: darkgray;
+}
+
+/*===Top Bar===*/
+.topBar {
+    border: 2px solid brown;
+}
+
+.userBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px 10px 0;
+    margin-left: auto;
+    margin-right: 0;
+    width: 110px;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/*===Page Content===*/
+.pageContent {
+    width: 100%;
+}
+
+.pageHead {
+    border: 2px solid darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageHeader {
+    text-align: center;
+    padding: 5vh 0 5vh 0;
+}
+
+.pageBody {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    border: 2px solid aquamarine;
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+    width: 100%;
+    margin: 15px 0 15px 0;
+}
+
+.input > input {
+    margin: 5px 0 0 0;
+    height: 35px;
+}
