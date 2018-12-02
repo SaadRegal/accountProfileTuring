@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dropdown.min.css">
+    <link rel="stylesheet" href="css/transition.min.css">
+    <link rel="stylesheet" href="css/icon.min.css">
+    <link rel="stylesheet" href="css/flag.min.css">
 </head>
 <body>
 <div class="toggle">
@@ -14,22 +18,22 @@
     <div class="header">
         <h2>Giselle</h2>
     </div>
-    <div class="item">
+    <div class="item link">
         Account
     </div>
-    <div class="item">
+    <div class="item link">
         Career
     </div>
-    <div class="item active">
+    <div class="item link active">
         Personal
     </div>
-    <div class="item">
+    <div class="item link">
         Manage
     </div>
-    <div class="item">
+    <div class="item link">
         Password
     </div>
-    <div class="item">
+    <div class="item link">
         Email
     </div>
 
@@ -52,21 +56,83 @@
     <div class="pageBody">
         <form class="form">
             <h4>Personal information</h4>
-            <div class="input">
-                <label>First name</label>
-                <input type="text">
+            <div class="input fancy">
+                <div class="label">
+                    <label>First name</label>
+                </div>
+                <input type="text" placeholder="What's your name">
             </div>
-            <div class="input">
-                <label>First name</label>
-                <input type="text">
+            <div class="input fancy">
+                <div class="label">
+                    <label>Email</label>
+                </div>
+                <input type="text" placeholder="Your fancy email">
             </div>
+
             <div class="input">
-                <label>First name</label>
-                <input type="text">
+                <div class="label">
+                    <label>Country</label>
+                </div>
+                <div class="ui search selection dropdown select">
+                    <input type="hidden" name="country">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Select Country</div>
+                    <div class="menu">
+                        <div class="item" data-value="ye"><i class="ye flag"></i>Yemen</div>
+                        <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+                        <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
 
 </div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/transition.min.js"></script>
+<script src="js/dropdown.min.js"></script>
+
+<script type="text/javascript">
+    // $.fn.dropdown = function () {
+    // };
+    $.fn._fade = function (dir) {
+        if(dir==='up'){
+            this.animate({bottom:'5px',opacity:1},200)
+        }else if(dir==='down'){
+            this.animate({bottom:'0',opacity:0},200)
+        }
+    };
+    $.fn.fancyInput = function () {
+this.each(function () {
+
+    const fi=this; /*need to be refactor this line in case fi not used again*/
+    const input = $('input', fi);
+    const label =$('label',fi);
+    input.on('focus', function () {
+        label._fade('up');
+    });
+    input.on('blur',function () {
+        input.css('border-bottom','1px darkgray solid');
+        if(input.val().length===0){
+            label._fade('down')
+        }
+    });
+
+    input.on('keyup',function () {
+       if(input.val().length!==0){
+           input.animate({width:10*(input.val().length+2)+'px'},100).css('border-bottom','1px black solid');
+       }else{
+           input.animate({width:'100%'}).css('border-bottom','1px darkgray solid')
+       }
+    })
+})
+    };
+
+    $(document).ready(function () {
+        $('.input.fancy').fancyInput();
+        $('.ui.dropdown').dropdown();
+    });//doc ready
+
+</script>
 </body>
 </html>
