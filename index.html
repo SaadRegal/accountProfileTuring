@@ -18,7 +18,7 @@
     <div class="header">
         <h2>Giselle</h2>
     </div>
-    <div class="item link">
+    <div class="main item">
         Account
     </div>
     <div class="item link">
@@ -27,7 +27,7 @@
     <div class="item link active">
         Personal
     </div>
-    <div class="item link">
+    <div class="main item">
         Manage
     </div>
     <div class="item link">
@@ -50,7 +50,7 @@
     <div class="pageHead">
         <div class="pageHeader">
             <h1>Your Account</h1>
-            <h3> Tell us a little more about yourself </h3>
+            <h5> Tell us a little more about yourself </h5>
         </div>
     </div>
     <div class="pageBody">
@@ -68,7 +68,6 @@
                 </div>
                 <input type="text" placeholder="Your fancy email">
             </div>
-
             <div class="input">
                 <div class="label">
                     <label>Country</label>
@@ -112,7 +111,7 @@ this.each(function () {
         label._fade('up');
     });
     input.on('blur',function () {
-        input.css('border-bottom','1px darkgray solid');
+        input.css('border-bottom','2px #D4D4D4 solid');
         if(input.val().length===0){
             label._fade('down')
         }
@@ -120,9 +119,9 @@ this.each(function () {
 
     input.on('keyup',function () {
        if(input.val().length!==0){
-           input.animate({width:10*(input.val().length+2)+'px'},100).css('border-bottom','1px black solid');
+           input.animate({width:9*(input.val().length+2)+'px'},100).css('border-bottom','2px black solid');
        }else{
-           input.animate({width:'100%'}).css('border-bottom','1px darkgray solid')
+           input.animate({width:'100%'}).css('border-bottom','2px #D4D4D4 solid')
        }
     })
 })
