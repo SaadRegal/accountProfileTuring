@@ -40,7 +40,11 @@ h5 {
 }
 
 .sidebar > .link:hover {
-    background-color: darkgray;
+    background-color: #f4f4f4;
+}
+
+.sidebar > .item.active {
+    background-color: #fcfcfc;
 }
 
 /*===Side Bar===*/
@@ -49,7 +53,7 @@ h5 {
     height: 100%;
     background-color: #fff;
     width: 13.5vw;
-    border-right: 1px darkgray solid;
+    border-right: 1px #D4D4D4 solid;
 }
 
 .toggle {
@@ -63,29 +67,28 @@ h5 {
     z-index: 2;
 }
 
-.sidebar > .header {
+.sidebar > .main.header {
     margin-top: 16vh;
     /*padding: 0 0 1vh 1.5vw;*/
 }
 
-.sidebar > .header > h2 {
+.sidebar > .main.header > h2 {
     margin: 0 0 2vh 0;
-    border-bottom: 1px darkgray solid;
+    border-bottom: 1px #f7f7f7 solid;
     padding: 0 0 2.5vh 1.5vw;
 }
 
 .sidebar > .item {
     padding: 2vh 0 2vh 1.5vw;
-}
-.sidebar > .item.main {
-    padding: 1vh 0 1vh 1.5vw;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.8em;
+    color: #7e7e7e;
 }
 
-.sidebar > .item.active {
-    background-color: darkgray;
+.sidebar > .item.header {
+    padding: 1vh 0 1vh 1.5vw;
+    text-transform: uppercase;
+    font-family: FaktProRVLRYMed, sans-serif;
+    font-size: 0.8em;
+    color: black;
 }
 
 /*===Top Bar===*/
@@ -98,7 +101,7 @@ h5 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding:1vh 0.5vw 1vh 0;
+    padding: 1vh 0.5vw 1vh 0;
     margin-left: auto;
     margin-right: 0;
     width: 110px;
@@ -116,7 +119,7 @@ h5 {
 }
 
 .pageHead {
-    border-bottom: 1px solid darkgray;
+    border-bottom: 4px solid #f7f7f7;
     /*display: flex;*/
     /*align-items: center;*/
     /*justify-content: center;*/
@@ -128,10 +131,12 @@ h5 {
     text-align: center;
     /*padding: 5vh 0 5vh 0;*/
 }
-.pageHeader>h1{
+
+.pageHeader > h1 {
     margin: 0 0 4.5vh 0;
 }
-.pageHeader>h5{
+
+.pageHeader > h5 {
     margin: 0;
 }
 
@@ -166,15 +171,17 @@ h5 {
     /*align-self: flex-end;*/
     width: 100%;
     border: 0;
-    border-bottom: 2px #D4D4D4 solid;
+    border-bottom: 2px #f7f7f7 solid;
     font-family: "Gordita Regular", sans-serif;
 
 }
 
 .fancy > .label > label {
-    font-size: 15px;
     opacity: 0;
     position: relative;
+}
+.input>.label>label{
+    font-size: 15px;
 }
 
 .fancy > .label {
@@ -183,17 +190,21 @@ h5 {
 
 .select {
     min-height: 30px !important;
-    /*max-height: 70px !important;*/
     border: 0 !important;
+    border-bottom: 2px #f7f7f7 solid !important;
+    border-radius: 0 !important;
+}
+.select:focus{
+    border-bottom: black 1px solid !important;
 }
 
 .select > .menu {
     border: 0 !important;
-    border-bottom: darkgray 1px solid;
+    /*border-bottom: 1px #D4D4D4  solid;*/
 }
 
 .select > input {
-    border-bottom: 1px darkgray solid !important;
+    border-bottom: 1px #D4D4D4 solid !important;
 }
 
 input:focus {

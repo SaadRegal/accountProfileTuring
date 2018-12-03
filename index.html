@@ -15,10 +15,10 @@
 <div class="toggle">
 </div>
 <div class="sidebar">
-    <div class="header">
+    <div class="main header">
         <h2>Giselle</h2>
     </div>
-    <div class="main item">
+    <div class="header item">
         Account
     </div>
     <div class="item link">
@@ -27,7 +27,7 @@
     <div class="item link active">
         Personal
     </div>
-    <div class="main item">
+    <div class="header item">
         Manage
     </div>
     <div class="item link">
@@ -111,7 +111,7 @@ this.each(function () {
         label._fade('up');
     });
     input.on('blur',function () {
-        input.css('border-bottom','2px #D4D4D4 solid');
+        input.css('border-bottom','2px #f7f7f7 solid');
         if(input.val().length===0){
             label._fade('down')
         }
@@ -121,7 +121,7 @@ this.each(function () {
        if(input.val().length!==0){
            input.animate({width:9*(input.val().length+2)+'px'},100).css('border-bottom','2px black solid');
        }else{
-           input.animate({width:'100%'}).css('border-bottom','2px #D4D4D4 solid')
+           input.animate({width:'100%'}).css('border-bottom','2px #f7f7f7 solid')
        }
     })
 })
