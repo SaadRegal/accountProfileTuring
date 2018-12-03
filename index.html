@@ -341,7 +341,7 @@
     };
     $.fn.fancyInput = function () {
         this.each(function () {
-            
+
             const input = $('input', this);
             const label = $('label', this);
             input.on('focus', function () {
@@ -363,10 +363,12 @@
             })
         })
     };
-
     $(document).ready(function () {
         $('.input.fancy').fancyInput();
         $('.ui.dropdown').dropdown();
+
+        let sidebarToggled=true;
+        const $sidebar=$('.sidebar');
         $('.toggle').on('click', function () {
             $('.sidebar').transition('fade right');
             const icon = $('i', $(this));
@@ -383,6 +385,21 @@
                 })
             }
         })
+
+
+        $(window).on('load resize', function () {
+            if(sidebarToggled){
+            if ($(this).width() <= 430) {
+                // close sidebar
+                $sidebar.transition('fade right');
+                sidebarToggled=false;
+            }
+            }else if ($(this).width() >= 430){
+                //open sidebar
+                $sidebar.transition('fade right');
+                sidebarToggled=true;
+            }
+        });
     });//doc ready
 </script>
 </body>
