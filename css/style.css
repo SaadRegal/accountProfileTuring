@@ -134,6 +134,7 @@ h5 {
 
 .pageHeader > h1 {
     margin: 0 0 4.5vh 0;
+    font-weight: lighter;
 }
 
 .pageHeader > h5 {
@@ -141,8 +142,10 @@ h5 {
 }
 
 .pageBody {
+    margin-top: 10vh;
     display: flex;
     justify-content: center;
+    min-height: 80vh;
 }
 
 /*===Form===*/
@@ -165,7 +168,7 @@ h5 {
 .input > input {
     margin: 5px 0 0 0;
     height: 50px;
-    min-width: 2%;
+    min-width: 3%;
     max-width: 100%;
     font-size: 15px;
     /*align-self: flex-end;*/
@@ -206,6 +209,11 @@ h5 {
 .select > input {
     border-bottom: 1px #D4D4D4 solid !important;
 }
+.select>input.search{
+    /*color: white !important;*/
+    font-family: "Gordita Regular", sans-serif ;
+    font-size: 15px;
+}
 
 input:focus {
     outline: none;
@@ -216,7 +224,7 @@ input::-webkit-input-placeholder {
     -webkit-transition: opacity 0.2s linear;
     color: black;
     font-size: 15px;
-    font-family: "Gordita Regular", sans-serif;
+    font-family: "Gordita Regular", sans-serif !important;
 }
 
 input:focus::-webkit-input-placeholder {
