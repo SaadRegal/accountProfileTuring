@@ -65,6 +65,13 @@ h5 {
     margin: 10px 0 0 1.5vw;
     position: fixed;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle>i{
+    right: 0;
+    position: relative;
 }
 
 .sidebar > .main.header {
