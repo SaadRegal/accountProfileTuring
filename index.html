@@ -369,6 +369,10 @@ this.each(function () {
     $(document).ready(function () {
         $('.input.fancy').fancyInput();
         $('.ui.dropdown').dropdown();
+        $('.toggle').on('click',function () {
+            $('.sidebar').transition('fade right');
+            console.log('clicked')
+        })
     });//doc ready
 
 </script>
