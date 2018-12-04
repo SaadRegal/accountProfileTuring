@@ -55,6 +55,7 @@ h5 {
     background-color: #fff;
     width: 13.5vw;
     border-right: 1px #D4D4D4 solid;
+    z-index: 3;
 }
 
 .toggle {
@@ -65,7 +66,7 @@ h5 {
     border-radius: 50%;
     margin: 10px 0 0 1.5vw;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,10 +102,6 @@ h5 {
 }
 
 /*===Top Bar===*/
-.topBar {
-
-}
-
 .userBar {
     display: flex;
     flex-direction: row;
@@ -129,16 +126,11 @@ h5 {
 
 .pageHead {
     border-bottom: 4px solid #f7f7f7;
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*height: 28.6vh;*/
     padding: 7.4vh 0 10.6vh 0;
 }
 
 .pageHeader {
     text-align: center;
-    /*padding: 5vh 0 5vh 0;*/
 }
 
 .pageHeader > h1 {
@@ -180,7 +172,6 @@ h5 {
     min-width: 3%;
     max-width: 100%;
     font-size: 15px;
-    /*align-self: flex-end;*/
     width: 100%;
     border: 0;
     border-bottom: 2px #f7f7f7 solid;
@@ -214,7 +205,6 @@ h5 {
 
 .select > .menu {
     border: 0 !important;
-    /*border-bottom: 1px #D4D4D4  solid;*/
 }
 
 .select > input {
@@ -222,7 +212,6 @@ h5 {
 }
 
 .select > input.search {
-    /*color: white !important;*/
     font-family: "Gordita Regular", sans-serif;
     font-size: 15px;
 }
@@ -245,7 +234,7 @@ input:focus::-webkit-input-placeholder {
 
 @media screen and (max-width: 680px) {
     .sidebar {
-        width: calc(10vw * 2);
+        width: 20vw;
     }
 }
 
@@ -255,18 +244,6 @@ input:focus::-webkit-input-placeholder {
         padding: 0 3vw 0 3vw;
     }
     .sidebar {
-        /*display: none;*/
-        width: calc(15vw * 2);
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .form {
-        /*width: 100%;*/
-        /*padding: 0 3vw 0 3vw;*/
-    }
-    .sidebar {
-        /*display: none;*/
-        width: calc(15vw * 2);
+        width: 25vw;
     }
 }
