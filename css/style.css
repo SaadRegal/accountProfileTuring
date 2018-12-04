@@ -45,6 +45,7 @@ h5 {
 
 .sidebar > .item.active {
     background-color: #fcfcfc;
+    font-weight: bold;
 }
 
 /*===Side Bar===*/
@@ -248,14 +249,21 @@ input:focus::-webkit-input-placeholder {
     }
 }
 
-@media screen and (max-width: 680px) {
-
+@media screen and (max-width: 545px) {
+    .form {
+        width: 100%;
+        padding: 0 3vw 0 3vw;
+    }
+    .sidebar {
+        /*display: none;*/
+        width: calc(15vw * 2);
+    }
 }
 
 @media screen and (max-width: 430px) {
     .form {
-        width: 100%;
-        padding: 0 3vw 0 3vw;
+        /*width: 100%;*/
+        /*padding: 0 3vw 0 3vw;*/
     }
     .sidebar {
         /*display: none;*/

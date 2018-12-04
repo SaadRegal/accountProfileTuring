@@ -61,13 +61,19 @@
                 <div class="label">
                     <label>First name</label>
                 </div>
-                <input type="text" placeholder="What's your name">
+                <input type="text" placeholder="What's your first name">
             </div>
             <div class="input fancy">
                 <div class="label">
-                    <label>Email</label>
+                    <label>Last Name</label>
                 </div>
-                <input type="text" placeholder="Your fancy email">
+                <input type="text" placeholder="What's your last name">
+            </div>
+            <div class="input fancy">
+                <div class="label">
+                    <label>Phone</label>
+                </div>
+                <input type="text" placeholder="What's your phone number">
             </div>
             <div class="input">
                 <div class="label">
@@ -389,12 +395,12 @@
 
         $(window).on('load resize', function () {
             if(sidebarToggled){
-            if ($(this).width() <= 430) {
+            if ($(this).width() <= 545) {
                 // close sidebar
                 $sidebar.transition('fade right');
                 sidebarToggled=false;
             }
-            }else if ($(this).width() >= 430){
+            }else if ($(this).width() >= 545){
                 //open sidebar
                 $sidebar.transition('fade right');
                 sidebarToggled=true;
