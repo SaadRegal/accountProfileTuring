@@ -369,41 +369,44 @@
             })
         })
     };
+    let sidebarToggled=true;
+    const icon = $('.toggle>i');
+    function toggleSidebarContent() {
+        $('.sidebar').transition('fade right');
+    }
+    function openSidebar(){
+        toggleSidebarContent();
+        icon.animate({left: '40px'}, function () {
+            $(this).animate({left: 0},function () {
+                $(this).css({left:''})
+            }).removeClass('right').addClass('left');
+        });
+        sidebarToggled=true;
+    }
+    function closeSidebar(){
+        toggleSidebarContent();
+        icon.animate({right: '40px'}, function () {
+            $(this).animate({right: 0}).removeClass('left').addClass('right');
+        });
+        sidebarToggled=false;
+    }
     $(document).ready(function () {
         $('.input.fancy').fancyInput();
         $('.ui.dropdown').dropdown();
-
-        let sidebarToggled=true;
-        const $sidebar=$('.sidebar');
         $('.toggle').on('click', function () {
-            $('.sidebar').transition('fade right');
-            const icon = $('i', $(this));
-
-            if (icon.hasClass('left')) {
-                icon.animate({right: '40px'}, function () {
-                    $(this).animate({right: 0}).removeClass('left').addClass('right');
-                })
-            } else if (icon.hasClass('right')) {
-                icon.animate({left: '40px'}, function () {
-                    $(this).animate({left: 0},function () {
-                        $(this).css({left:''})
-                    }).removeClass('right').addClass('left');
-                })
+            if (sidebarToggled) {
+                closeSidebar();
+            } else if (!sidebarToggled) {
+                openSidebar();
             }
-        })
-
-
+        });
         $(window).on('load resize', function () {
             if(sidebarToggled){
             if ($(this).width() <= 545) {
-                // close sidebar
-                $sidebar.transition('fade right');
-                sidebarToggled=false;
+                closeSidebar()
             }
             }else if ($(this).width() >= 545){
-                //open sidebar
-                $sidebar.transition('fade right');
-                sidebarToggled=true;
+                openSidebar();
             }
         });
     });//doc ready
