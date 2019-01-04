@@ -1,16 +1,16 @@
 /*Type*/
 @font-face {
-    font-family: 'Gordita';
+    font-family: 'Gordita Regular';
     src: url('fonts/hinted-GorditaRegular.ttf');
 }
 
 @font-face {
-    font-family: 'Gordita';
+    font-family: 'Gordita Medium';
     src: url('fonts/hinted-GorditaMedium.ttf');
 }
 
 @font-face {
-    font-family: 'Gordita';
+    font-family: 'Gordita Bold';
     src: url('fonts/hinted-GorditaBold.ttf');
 }
 
