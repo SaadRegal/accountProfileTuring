@@ -3,7 +3,7 @@ Account profile layout and UI made for Turing.com
 ![image](https://user-images.githubusercontent.com/12308809/50055254-99251f80-014c-11e9-9007-82004eefd3f4.png)
 
 ## Demo
-http://profileturing.surge.sh/
+https://profileturing.surge.sh/
 ## Features 
 ### ✔️ Fancy Input
 Check out [fancyInput](https://github.com/SaadRegal/fancyInput) plugin
